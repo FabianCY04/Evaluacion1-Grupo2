@@ -1,0 +1,36 @@
+# ==========================================
+# Contenido de un .gitignore para Proyectos
+# ==========================================
+
+# 1. Ejecutables y Archivos Compilados (Basura Binaria)
+# Ignora cualquier archivo que termine en estas extensiones 
+*.o
+*.out
+*.exe
+*.dll
+
+# 2. Directorios de compilación
+# Ignora carpetas enteras de salida de compilación 
+build/
+bin/
+obj/
+
+# 3. Archivos de Entorno y Variables Secretas (¡Seguridad!)
+# Evita fugas de contraseñas y credenciales 
+.env
+*.env.local
+
+# 4. Logs e Historiales generados por ejecución
+# Archivos de registro que solo ocupan espacio innecesario 
+*.log
+logs/
+
+# 5. Configuraciones locales del editor (VS Code)
+# Evita imponer tus preferencias de colores o fuente al equipo 
+.vscode/
+.code-workspace
+
+# 6. Archivos ocultos del Sistema Operativo
+# Basura generada automáticamente por Windows o macOS 
+Thumbs.db
+.DS_Store
