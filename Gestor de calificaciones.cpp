@@ -111,7 +111,6 @@ string elegirSeccion()
     }
 }
 
-// NUEVA FUNCIÓN AUXILIAR: Cuenta cuántos alumnos hay en una materia y sección específica
 int contarEstudiantesEnSeccion(const string &materia, const string &seccion)
 {
     int contador = 0;
@@ -130,17 +129,15 @@ void registrarEstudiante()
     string materiaCandidata = elegirMateria();
     string seccionCandidata = elegirSeccion();
 
-    // 1. VALIDACIÓN DE CUPO: Verificar si la sección ya llegó a 30
     int totalInscritos = contarEstudiantesEnSeccion(materiaCandidata, seccionCandidata);
     if (totalInscritos >= 30)
     {
-        cout << "\n❌ ERROR: Lo sentimos, la Seccion " << seccionCandidata
+        cout << "\nERROR: Lo sentimos, la Seccion " << seccionCandidata
              << " de la materia " << materiaCandidata
              << " ya alcanzo el limite maximo de 30 estudiantes.\n";
-        return; // Rompe la función y regresa al menú principal sin pedir más datos
+        return;
     }
 
-    // 2. Si hay cupo, procedemos con el registro normal
     Estudiante e;
     e.materia = materiaCandidata;
     e.seccion = seccionCandidata;
